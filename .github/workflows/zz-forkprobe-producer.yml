@@ -1,0 +1,8 @@
+name: forkprobe build
+on:
+  pull_request:
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo PRODUCER_RAN

@@ -1,0 +1,10 @@
+name: forkprobe watcher
+on:
+  workflow_run:
+    workflows: ["forkprobe build"]
+    types: [completed]
+jobs:
+  w:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "WATCHER_RAN artifacts=${{ github.event.workflow_run.artifacts_url }}"
